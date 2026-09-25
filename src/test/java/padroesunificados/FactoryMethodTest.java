@@ -1,4 +1,4 @@
-package padroescriacao.unificado;
+package padroesunificados;
 
 import org.junit.jupiter.api.Test;
 

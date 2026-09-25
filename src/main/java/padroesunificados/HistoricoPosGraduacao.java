@@ -1,4 +1,4 @@
-package padroescriacao.unificado;
+package padroesunificados;
 
 public class HistoricoPosGraduacao implements Historico {
 

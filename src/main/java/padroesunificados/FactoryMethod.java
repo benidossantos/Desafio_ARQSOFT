@@ -1,4 +1,4 @@
-package padroescriacao.unificado;
+package padroesunificados;
 
 public class FactoryMethod {
 
@@ -14,7 +14,7 @@ public class FactoryMethod {
         Class<?> classe;
         Object objeto;
         try {
-            classe = Class.forName("padroescriacao.unificado.Fabrica" + tipo);
+            classe = Class.forName("padroesunificados.Fabrica" + tipo);
             objeto = classe.getDeclaredConstructor().newInstance();
         } catch (Exception ex) {
             throw new IllegalArgumentException("Fábrica inexistente");
