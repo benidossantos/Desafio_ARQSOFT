@@ -1,0 +1,24 @@
+package padroescriacao.unificado;
+
+public class Aluno {
+
+    private Diploma diploma;
+    private Historico historico;
+
+    public Aluno(String tipoCurso) {
+        this(FactoryMethod.getInstance().obterFabrica(tipoCurso));
+    }
+
+    public Aluno(FabricaAbstrata fabrica) {
+        this.diploma = fabrica.createDiploma();
+        this.historico = fabrica.createHistorico();
+    }
+
+    public String emitirDiploma() {
+        return this.diploma.emitir();
+    }
+
+    public String emitirHistorico() {
+        return this.historico.emitir();
+    }
+}
